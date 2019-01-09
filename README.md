@@ -20,7 +20,7 @@ v1.1 (Jun 11, 2018)
 ------------------------
 - [new] Added plugin settings page
 
-v1.1 (Jun 23, 2018)
+v1.0 (Jun 23, 2018)
 ------------------------
 - [new] First release
 ```
