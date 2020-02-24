@@ -1,6 +1,6 @@
 <?php
 /*
-Copyright (C)2018 Md. Obydullah
+Copyright (C) 2020 Md. Obydullah
 
 APC Clear Cache is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ function mo_php_apc_tools_menu() {
 function theme_options_page() { ?>
     <div class="wrap">
         <div id="icon-options-general" class="icon32"></div>
-        <h1>APC Clear Cache</h1>
+        <h1>APCu/APC Clear Cache</h1>
 
         <?php
             //we check if the page is visited by click on the tabs or on the menu button.
@@ -34,10 +34,6 @@ function theme_options_page() { ?>
                 {
                     $active_tab = "apc_settings_tab";
                 }
-                else
-                {
-                    $active_tab = "apc_donate_tab";
-                }
             }
         ?>
         
@@ -45,7 +41,6 @@ function theme_options_page() { ?>
         <h2 class="nav-tab-wrapper">
             <!-- when tab buttons are clicked we jump back to the same page but with a new parameter that represents the clicked tab. accordingly we make it active -->
             <a href="?page=apc-clear-cache&tab=apc_settings_tab" class="nav-tab <?php if($active_tab == 'apc_settings_tab'){echo 'nav-tab-active';} ?> "><?php _e('Settings', 'sandbox'); ?></a>
-            <a href="?page=apc-clear-cache&tab=apc_donate_tab" class="nav-tab <?php if($active_tab == 'apc_donate_tab'){echo 'nav-tab-active';} ?>"><?php _e('Donate', 'sandbox'); ?></a>
         </h2>
 
         <form method="post" action="options.php">
@@ -101,12 +96,6 @@ function display_logo_form_element() {
         }
     }
 
-}
-
-// donate tab
-function display_donate_element() { ?>
-    <a target="_blank" class="button button-primary" href="https://obydul.me/donate">Donate</a>
-    <?php
 }
 
 add_action("admin_init", "display_options");
